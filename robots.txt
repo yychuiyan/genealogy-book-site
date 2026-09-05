@@ -1,0 +1,3 @@
+# 本站为家族内部传阅，请勿收录。
+User-agent: *
+Disallow: /

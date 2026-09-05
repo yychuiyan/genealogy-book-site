@@ -1,0 +1,1 @@
+var e=[`〇`,`一`,`二`,`三`,`四`,`五`,`六`,`七`,`八`,`九`];function t(t){if(t<0)return String(t);if(t<10)return e[t];if(t<20)return t===10?`十`:`十${e[t-10]}`;if(t<100){let n=Math.floor(t/10),r=t%10;return`${e[n]}十${r?e[r]:``}`}return String(t)}function n(e){return`第${t(e)}世`}export{n as t};

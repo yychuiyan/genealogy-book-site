@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-qnkxrarz><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>出错了</title><style>:root{color-scheme:light dark;--bg:#f5f2e9;--ink:#23201c;--panel:#ece6d6;--mark:#9e3a2f}html.dark{--bg:#1a1a18;--ink:#ebe6da;--panel:#2a2924;--mark:#d4786c}[data-astro-cid-qnkxrarz]{box-sizing:border-box}body{min-height:100dvh;color:var(--ink);background:var(--bg);place-items:center;margin:0;padding:2rem 1.25rem;font-family:Songti SC,STSong,Noto Serif CJK SC,serif;display:grid}.theme[data-astro-cid-qnkxrarz]{border:1px solid color-mix(in srgb, var(--ink) 28%, transparent);background:var(--panel);width:2.4rem;height:2.4rem;color:var(--ink);cursor:pointer;border-radius:999px;font-size:1.05rem;line-height:1;position:fixed;top:.85rem;right:.85rem}.panel[data-astro-cid-qnkxrarz]{background:var(--panel);border-left:4px solid var(--mark);white-space:pre-wrap;word-break:break-word;width:min(36rem,100%);padding:1.1rem 1.25rem;font-size:1.05rem;line-height:1.7}
+</style><script type="module" src="/_astro/page.BgssCbn2.js"></script></head><body data-astro-cid-qnkxrarz><button type="button" class="theme" id="theme-toggle" aria-label="切换主题" data-astro-cid-qnkxrarz>☀</button><p class="panel" data-astro-cid-qnkxrarz>发生未知错误</p><script>
+      const root = document.documentElement;
+      const btn = document.getElementById("theme-toggle");
+      const key = "genealogy-error-theme";
+      const apply = (dark) => {
+        root.classList.toggle("dark", dark);
+        if (btn) btn.textContent = dark ? "☾" : "☀";
+        localStorage.setItem(key, dark ? "dark" : "light");
+      };
+      const saved = localStorage.getItem(key);
+      apply(
+        saved
+          ? saved === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches,
+      );
+      btn?.addEventListener("click", () => apply(!root.classList.contains("dark")));
+    </script></body></html>
